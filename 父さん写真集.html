@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="icon" href="./favicon.ico" id="favicon">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+
+<title>父さん写真集</title>
+<style type="text/css"><!--
+
+body {background-color:#f0ffff}
+table		{width:100%}
+td.titlebar{color:white;
+            font-size:25px;
+            
+            background-color:#339999;
+            margin-top:10pt;
+            margin-bottom:10pt;
+            text-align:center;}
+h1 {color:white;
+    font-size:40px;
+    backgroud-color:#339999;
+    text-align:center;}
+h2 {color:339999;
+    font-size:40px;
+    backgroud-color:#f0ffff;
+    text-align:center;}
+
+.carousel {
+  width: 640px;
+  height: 480px;
+  display: flex;    /* 子要素を横に並べる */
+  overflow: hidden; /* はみ出た部分は表示しない */
+  margin: 5 auto;   /* 水平方向中央寄せ */
+}
+/* カルーセル内の画像 */
+.carousel img {
+  margin: 0;
+  padding: 0;
+  display: block; /* imgタグの改行のすき間を消すため */
+}
+/* スクロールアニメーションのキーフレーム */
+@keyframes scroll {
+  /* 初期位置は1個目の画像が左端 */
+  0% { margin-left: 0; }      
+  /* 1個分左の位置に進めて2個目の画像を左端にする */
+  20% { margin-left: -100%; }
+  /* 少しの間上と同じ位置 */  
+  25% { margin-left: -100%; }
+  /* 2個分左の位置に進めて3個目の画像を左端にする */
+  45% { margin-left: -200%; }
+  /* 少しの間上と同じ位置 */  
+  50% { margin-left: -200%; }
+  /* 以降は上と同様に繰り返し */
+  70% { margin-left: -300%; }
+  75% { margin-left: -300%; }
+  95% { margin-left: -400%; }
+  100% { margin-left: -400%; }
+}
+/* カルーセルの子要素にスクロールアニメーションを設定 */
+.carousel > :first-child {
+  animation-name: scroll;    /* キーフレーム名 */
+  animation-duration: 40s;  /* 再生時間全体は20秒 */
+  animation-delay: 3s;      /* 読込直後から遅延無しで開始 */
+  animation-iteration-count: infinite;  /* 無限に繰り返す */
+}
+
+--></style>
+</head>
+<body>
+
+<table cellspacing="0">
+<tr><td class="titlebar">
+<h1>父さん写真集</h1>
+</tb></tr>
+</table>
+
+<div class="carousel">
+  <img src = "写真集1.JPEG">
+  <img src = "写真集2.JPEG">
+  <img src = "写真集3.JPEG">
+  <img src = "写真集4.JPEG">
+  <img src = "写真集1.JPEG">
+</div>
+
+<h2>いつもありがとう！</h2>
+<div align="center">
+<img src = "いつもありがとう！.JPG">
+
+</body>
+<html>
