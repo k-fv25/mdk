@@ -1,9 +1,10 @@
 <html>
 <head>
+<meta charset="UTF-8">            
 <link rel="icon" href="./favicon.ico" id="favicon">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
 
-<title>������ʐ^�W</title>
+<title>父さん写真集</title>
 <style type="text/css"><!--
 
 body {background-color:#f0ffff}
@@ -27,40 +28,40 @@ h2 {color:339999;
 .carousel {
   width: 640px;
   height: 480px;
-  display: flex;    /* �q�v�f�����ɕ��ׂ� */
-  overflow: hidden; /* �͂ݏo�������͕\�����Ȃ� */
-  margin: 5 auto;   /* �������������� */
+  display: flex;    /* 子要素を横に並べる */
+  overflow: hidden; /* はみ出た部分は表示しない */
+  margin: 5 auto;   /* 水平方向中央寄せ */
 }
-/* �J���[�Z�����̉摜 */
+/* カルーセル内の画像 */
 .carousel img {
   margin: 0;
   padding: 0;
-  display: block; /* img�^�O�̉��s�̂����Ԃ��������� */
+  display: block; /* imgタグの改行のすき間を消すため */
 }
-/* �X�N���[���A�j���[�V�����̃L�[�t���[�� */
+/* スクロールアニメーションのキーフレーム */
 @keyframes scroll {
-  /* �����ʒu��1�ڂ̉摜�����[ */
+  /* 初期位置は1個目の画像が左端 */
   0% { margin-left: 0; }      
-  /* 1�����̈ʒu�ɐi�߂�2�ڂ̉摜�����[�ɂ��� */
+  /* 1個分左の位置に進めて2個目の画像を左端にする */
   20% { margin-left: -100%; }
-  /* �����̊ԏ�Ɠ����ʒu */  
+  /* 少しの間上と同じ位置 */  
   25% { margin-left: -100%; }
-  /* 2�����̈ʒu�ɐi�߂�3�ڂ̉摜�����[�ɂ��� */
+  /* 2個分左の位置に進めて3個目の画像を左端にする */
   45% { margin-left: -200%; }
-  /* �����̊ԏ�Ɠ����ʒu */  
+  /* 少しの間上と同じ位置 */  
   50% { margin-left: -200%; }
-  /* �ȍ~�͏�Ɠ��l�ɌJ��Ԃ� */
+  /* 以降は上と同様に繰り返し */
   70% { margin-left: -300%; }
   75% { margin-left: -300%; }
   95% { margin-left: -400%; }
   100% { margin-left: -400%; }
 }
-/* �J���[�Z���̎q�v�f�ɃX�N���[���A�j���[�V������ݒ� */
+/* カルーセルの子要素にスクロールアニメーションを設定 */
 .carousel > :first-child {
-  animation-name: scroll;    /* �L�[�t���[���� */
-  animation-duration: 40s;  /* �Đ����ԑS�̂�20�b */
-  animation-delay: 3s;      /* �Ǎ����ォ��x�������ŊJ�n */
-  animation-iteration-count: infinite;  /* �����ɌJ��Ԃ� */
+  animation-name: scroll;    /* キーフレーム名 */
+  animation-duration: 40s;  /* 再生時間全体は20秒 */
+  animation-delay: 3s;      /* 読込直後から遅延無しで開始 */
+  animation-iteration-count: infinite;  /* 無限に繰り返す */
 }
 
 --></style>
@@ -69,21 +70,21 @@ h2 {color:339999;
 
 <table cellspacing="0">
 <tr><td class="titlebar">
-<h1>������ʐ^�W</h1>
+<h1>父さん写真集</h1>
 </tb></tr>
 </table>
 
 <div class="carousel">
-  <img src = "�ʐ^�W1.JPEG">
-  <img src = "�ʐ^�W2.JPEG">
-  <img src = "�ʐ^�W3.JPEG">
-  <img src = "�ʐ^�W4.JPEG">
-  <img src = "�ʐ^�W1.JPEG">
+  <img src = "写真集1.JPEG">
+  <img src = "写真集2.JPEG">
+  <img src = "写真集3.JPEG">
+  <img src = "写真集4.JPEG">
+  <img src = "写真集1.JPEG">
 </div>
 
-<h2>�������肪�Ƃ��I</h2>
+<h2>いつもありがとう！</h2>
 <div align="center">
-<img src = "�������肪�Ƃ��I.JPG">
+<img src = "いつもありがとう！.JPG">
 
 </body>
 <html>
